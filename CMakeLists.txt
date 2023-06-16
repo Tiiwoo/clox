@@ -4,6 +4,8 @@ project(clox)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(clox main.c chunk.c memory.c debug.c)
+file(GLOB SOURCES "*.c")
+
+add_executable(clox ${SOURCES})
 
 target_include_directories(clox PRIVATE ${CMAKE_SOURCE_DIR})
